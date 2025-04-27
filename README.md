@@ -13,9 +13,9 @@ Como eu já ensinei várias pessoas a utilizarem o git, achei que pudesse deixar
   - [Como saber em qual branch estou?](#14-como-saber-em-qual-branch-estou)
   - [Procedimento de commit](#15-procedimento-de-commit)
   - [Como ver os branches no GitHub?](#16-como-ver-os-branches-no-github)
-  - [Procedimento merge/pull request](#17-procedimento-mergepull-request)
+  - [Procedimento merge/pull request](#17-procedimento-merge-e-pull-request)
   - [Comecei a alterar o código mas esqueci de criar uma branch, o que eu faço?](#18-comecei-a-alterar-o-codigo-mas-esqueci-de-criar-uma-branch-o-que-eu-faco)
-  - [Fiz push na Main, o que eu faço?](#19fiz-push-na-main-o-que-eu-faco)
+  - [Fiz push na Main, o que eu faço?](#19-fiz-push-na-main-o-que-eu-faco)
   - [Procedimento rebase](#110-procedimento-rebase)
     
 ## 1. Uso de branches
@@ -65,11 +65,11 @@ Entre no repositório, e embaixo do nome do repositório irá mostrar o nome da 
 
 Para deletar um branch, é só fazer este procedimento e clicar na lixeira. Depois de fazer o merge, ou caso desista de trabalhar neste branch, ele deve ser deletado.
 
-### 1.7 Procedimento merge/ pull request
+### 1.7 Procedimento merge e pull request
 Você termina a parte do código em que estava trabalhando, realiza os testes, verifica que tudo funciona direitinho. Então é hora de juntar a sua parte com a base do projeto (main). 
-1. Primeiro: execute todos os passos do procedimento de commit.
-2. Avise a todos os colegas de equipe que irá abrir um PR (pull request)
-3. Abra o github no repositório do projeto e você verá uma mensagem em uma cor chamativa e com um botão ao lado escrito “compare & pull request”. Clique nele.<br><br>
+- Primeiro: execute todos os passos do procedimento de commit.
+- Avise a todos os colegas de equipe que irá abrir um PR (pull request)
+- Abra o github no repositório do projeto e você verá uma mensagem em uma cor chamativa e com um botão ao lado escrito “compare & pull request”. Clique nele.<br><br>
 
 <img width="740" alt="Image" src="https://github.com/user-attachments/assets/f0a30448-dd96-4fc3-a7cd-54c47c97ed36" />
 
@@ -80,20 +80,20 @@ Ou entre no branch e faça por lá.
 <img width="741" alt="Image" src="https://github.com/user-attachments/assets/9b5cbe7c-86b1-4313-b038-40b0a063d304" />
 
   Preencha todos os campos do pull request de maneira clara.
-4. Dê um assign para que outro membro da equipe verifique se o seu pull request está ok para ser mergeado
-5. Após a aprovação do PR por um colega, siga com os comandos:
+- Dê um assign para que outro membro da equipe verifique se o seu pull request está ok para ser mergeado
+- Após a aprovação do PR por um colega, siga com os comandos:
 >git checkout main
 >git status (conferir se está na main)
 >git pull_
-6. Deletar o branch no github
+- Deletar o branch no github
 
 <img width="731" alt="Image" src="https://github.com/user-attachments/assets/73619bf8-5a21-4397-8ed0-f7641762ff9e" />
 
-7. Avisar a todos da equipe que mergeou um novo PR, para que todos façam pull na main.
+- Avisar a todos da equipe que mergeou um novo PR, para que todos façam pull na main.
 ### 1.8 Comecei a alterar o código mas esqueci de criar uma branch, o que eu   faço?
 >git checkout -b nome-da-branch
 Este comando irá levar suas alterações para esta nova branch.
-### 1.9Fiz push na Main, o que eu faço?
+### 1.9 Fiz push na Main, o que eu faço?
 Quando se faz isso, você pula o verificador de merge do github, que verifica antes de fazer o merge se não há conflitos com a main. Isso poderá causar diversos problemas e seus colegas de trabalho _não ficarão nenhum pouco felizes._ Por isso é sempre **importante: antes de começar a codar, dê o comando git status para saber onde está e crie sua branch.** É possível bloquear o push direto na main pelas configurações do repositório no github, e isso é uma prática recomendada.
 ### 1.10 Procedimento rebase
 Rebase faz exatamente o que o nome diz: troca a base. Quando uma pessoa faz um merge na main, essa main não é automaticamente atualizada. Pelo contrário, todo mundo continua com a branch antiga (antes do merge) em seus computadores. Isso nem sempre é um problema.  No exemplo abaixo (imagem 2), todos os programadores estão trabalhando em uma parte do código independente uma da outra. Logo, não há necessidade de atualizarem as suas bases, é só cada um fazer um merge que dará tudo certo.
