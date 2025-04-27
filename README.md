@@ -81,7 +81,7 @@ Para deletar um branch, é só fazer este procedimento e clicar na lixeira. Depo
 
 ### 1.7 Procedimento merge e pull request
 Você termina a parte do código em que estava trabalhando, realiza os testes, verifica que tudo funciona direitinho. Então é hora de juntar a sua parte com a base do projeto (main). 
-- Primeiro: execute todos os passos do procedimento de commit ([Procedimento de commit](#15-procedimento-de-commit)).
+- Primeiro: execute todos os passos do [Procedimento de commit](#15-procedimento-de-commit).
 - Avise a todos os colegas de equipe que irá abrir um PR (pull request)
 - Abra o github no repositório do projeto e você verá uma mensagem em uma cor chamativa e com um botão ao lado escrito “compare & pull request”. Clique nele.
 
@@ -126,7 +126,7 @@ Rebase faz exatamente o que o nome diz: troca a base. Quando uma pessoa faz um m
 
 ![Image](https://github.com/user-attachments/assets/83d6340f-bdd6-4f93-b8b3-3632bb0fc4b7)
 
-Vamos dizer que no exemplo da imagem 3, Giovanni não precisa saber como a Ana fez a função “remover” para terminar a sua parte do código. Então não há problemas em ele não atualizar sua main dentro de sua branch (embora no seu computador, ele deva fazer isso, como descrito no tópico “merge” deste manual - [Procedimento merge/pull request](#17-procedimento-merge-e-pull-request)). 
+Vamos dizer que no exemplo da imagem 3, Giovanni não precisa saber como a Ana fez a função “remover” para terminar a sua parte do código. Então não há problemas em ele não atualizar sua main dentro de sua branch (embora no seu computador, ele deva fazer isso, como descrito no [Procedimento merge/pull request](#17-procedimento-merge-e-pull-request)). 
 
 Já Gustavo prefere saber como Ana fez, já que a função na qual está trabalhando - inserir - é um pouco parecida, então ele opta por fazer o rebase e continuar o trabalho a partir disso. Em sua branch ele dá o seguinte comando:
 
