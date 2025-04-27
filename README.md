@@ -1,5 +1,5 @@
 # Guia de git para estudantes
-Este é um guia básico e descontraído de git feito por uma estudante, para outros estudantes. Este guia estará em constante evolução, e irá começar abordando como lidar com branches.
+Este é um guia básico e descontraído de git feito por uma estudante para outros estudantes. Este guia estará em constante evolução, e irá começar abordando como lidar com branches.
 
 Como eu já ensinei várias pessoas a utilizarem o git, achei que pudesse deixar público para que pudesse ser mais útil para mais gente. 
 
