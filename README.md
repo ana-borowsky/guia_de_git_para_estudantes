@@ -7,16 +7,16 @@ Como eu já ensinei várias pessoas a utilizarem o git, achei que pudesse deixar
 
 ## Índice
 - [Uso de branches](#1-uso-de-branches)
-  - [O que são branches?](#o-que-são-branches)
-  - [Como criar branches?](#como-criar-branches)
-  - [Como trocar de branches?](#como-trocar-de-branches)
+  - [O que são branches?](#11-o-que-são-branches)
+  - [Como criar branches?](#12-como-criar-branches)
+  - [Como trocar de branches?](#13-como-trocar-de-branches)
   - [Como saber em qual branch estou?](#14-como-saber-em-qual-branch-estou)
-  - [Procedimento de commit](#procedimento-de-commit)
-  - [Como ver os branches no GitHub?](#como-ver-os-branches-no-github)
-  - [Procedimento merge/pull request](#procedimento-mergepull-request)
-  - [Comecei a alterar o código mas esqueci de criar uma branch, o que eu faço?](#comecei-a-alterar-o-codigo-mas-esqueci-de-criar-uma-branch-o-que-eu-faco)
-  - [Fiz push na Main, o que eu faço?](#fiz-push-na-main-o-que-eu-faco)
-  - [Procedimento rebase](#procedimento-rebase)
+  - [Procedimento de commit](#15-procedimento-de-commit)
+  - [Como ver os branches no GitHub?](#16-como-ver-os-branches-no-github)
+  - [Procedimento merge/pull request](#17-procedimento-mergepull-request)
+  - [Comecei a alterar o código mas esqueci de criar uma branch, o que eu faço?](#18-comecei-a-alterar-o-codigo-mas-esqueci-de-criar-uma-branch-o-que-eu-faco)
+  - [Fiz push na Main, o que eu faço?](#19fiz-push-na-main-o-que-eu-faco)
+  - [Procedimento rebase](#110-procedimento-rebase)
     
 ## 1. Uso de branches
 ### 1.1 O que são branches?
@@ -93,7 +93,7 @@ Ou entre no branch e faça por lá.
 ### 1.8 Comecei a alterar o código mas esqueci de criar uma branch, o que eu   faço?
 >git checkout -b nome-da-branch
 Este comando irá levar suas alterações para esta nova branch.
-### Fiz push na Main, o que eu faço?
+### 1.9Fiz push na Main, o que eu faço?
 Quando se faz isso, você pula o verificador de merge do github, que verifica antes de fazer o merge se não há conflitos com a main. Isso poderá causar diversos problemas e seus colegas de trabalho _não ficarão nenhum pouco felizes._ Por isso é sempre **importante: antes de começar a codar, dê o comando git status para saber onde está e crie sua branch.** É possível bloquear o push direto na main pelas configurações do repositório no github, e isso é uma prática recomendada.
 ### 1.10 Procedimento rebase
 Rebase faz exatamente o que o nome diz: troca a base. Quando uma pessoa faz um merge na main, essa main não é automaticamente atualizada. Pelo contrário, todo mundo continua com a branch antiga (antes do merge) em seus computadores. Isso nem sempre é um problema.  No exemplo abaixo (imagem 2), todos os programadores estão trabalhando em uma parte do código independente uma da outra. Logo, não há necessidade de atualizarem as suas bases, é só cada um fazer um merge que dará tudo certo.
