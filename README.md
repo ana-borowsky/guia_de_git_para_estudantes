@@ -10,7 +10,7 @@ Como eu já ensinei várias pessoas a utilizarem o git, achei que pudesse deixar
   - [O que são branches?](#o-que-são-branches)
   - [Como criar branches?](#como-criar-branches)
   - [Como trocar de branches?](#como-trocar-de-branches)
-  - [Como saber em qual branch estou?](#como-saber-em-qual-branch-estou)
+  - [Como saber em qual branch estou?](#14-como-saber-em-qual-branch-estou)
   - [Procedimento de commit](#procedimento-de-commit)
   - [Como ver os branches no GitHub?](#como-ver-os-branches-no-github)
   - [Procedimento merge/pull request](#procedimento-mergepull-request)
