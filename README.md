@@ -5,6 +5,19 @@ Como eu já ensinei várias pessoas a utilizarem o git, achei que pudesse deixar
 
 :star:Se este guia lhe foi útil, ou você aprendeu a usar o git comigo, deixa sua estrelinha como agradecimento!:star:
 
+## Índice
+- [Uso de branches](#uso-de-branches)
+  - [O que são branches?](#o-que-são-branches)
+  - [Como criar branches?](#como-criar-branches)
+  - [Como trocar de branches?](#como-trocar-de-branches)
+  - [Como saber em qual branch estou?](#como-saber-em-qual-branch-estou)
+  - [Procedimento de commit](#procedimento-de-commit)
+  - [Como ver os branches no GitHub?](#como-ver-os-branches-no-github)
+  - [Procedimento merge/pull request](#procedimento-mergepull-request)
+  - [Comecei a alterar o código mas esqueci de criar uma branch, o que eu faço?](#comecei-a-alterar-o-codigo-mas-esqueci-de-criar-uma-branch-o-que-eu-faco)
+  - [Fiz push na Main, o que eu faço?](#fiz-push-na-main-o-que-eu-faco)
+  - [Procedimento rebase](#procedimento-rebase)
+    
 ## 1. Uso de branches
 ### 1.1 O que são branches?
 Branches são derivações do código utilizados, normalmente, para adicionar novas funções ao programa. Ao utilizar branches, vários programadores podem trabalhar em um mesmo código ao mesmo tempo, ficando mais simples de resolver conflitos (diferenças entre os códigos). 
@@ -109,9 +122,6 @@ Quando for fazer o push, será necessário fazer:
 
 O git rebase reescreve o histórico de commits (muda o hash dos commits). Então, depois de um rebase, a sua branch local fica diferente da que está no repositório remoto. Por isso é necessário usar o push force. Em uma empresa, você vai demorar para ter clearance pra usar esse comando, mas em trabalhos da faculdade, está tudo bem.
 **Não é necessário fazer commit após fazer o rebase.**
-
-
-
 
 
 
