@@ -1,30 +1,38 @@
 # Guia de git para estudantes
-Este é um guia básico e descontraído de git feito por uma estudante para outros estudantes. Este guia estará em constante evolução, e irá começar abordando como lidar com branches.
-
-Como eu já ensinei várias pessoas a utilizarem o git, achei que pudesse deixar público para que pudesse ser mais útil para mais gente. 
+Este é um guia básico e descontraído de git feito por uma estudante para outros estudantes. 
 
 :star:Se este guia lhe foi útil, ou você aprendeu a usar o git comigo, deixa sua estrelinha como agradecimento!:star:
 
+Este guia está em processo de construção. Mas a parte que ensina a usar branches já está pronta!
+
 ## Índice
-- [Uso de branches](#1-uso-de-branches)
-  - [O que são branches?](#11-o-que-são-branches)
-  - [Como criar branches?](#12-como-criar-branches)
-  - [Como trocar de branches?](#13-como-trocar-de-branches)
-  - [Como saber em qual branch estou?](#14-como-saber-em-qual-branch-estou)
-  - [Procedimento de commit](#15-procedimento-de-commit)
-  - [Como ver os branches no GitHub?](#16-como-ver-os-branches-no-github)
-  - [Procedimento merge/pull request](#17-procedimento-merge-e-pull-request)
-  - [Comecei a alterar o código mas esqueci de criar uma branch!](#18-comecei-a-alterar-o-código-mas-esqueci-de-criar-uma-branch)
-  - [Fiz push na Main!!](#19-fiz-push-na-main)
-  - [Procedimento rebase](#110-procedimento-rebase)
+- 1. [Uso de branches](#1-uso-de-branches)
+  - 1.1 [O que são branches?](#11-o-que-são-branches)
+  - 1.2 [Como criar branches?](#12-como-criar-branches)
+  - 1.3 [Como trocar de branches?](#13-como-trocar-de-branches)
+  - 1.4 [Como saber em qual branch estou?](#14-como-saber-em-qual-branch-estou)
+  - 1.5 [Procedimento de commit](#15-procedimento-de-commit)
+  - 1.6 [Como ver os branches no GitHub?](#16-como-ver-os-branches-no-github)
+  - 1.7 [Procedimento merge/pull request](#17-procedimento-merge-e-pull-request)
+  - 1.8 [Comecei a alterar o código mas esqueci de criar uma branch!](#18-comecei-a-alterar-o-código-mas-esqueci-de-criar-uma-branch)
+  - 1.9 [Fiz push na Main!!](#19-fiz-push-na-main)
+  - 1.10 [Procedimento rebase](#110-procedimento-rebase)
     
 ## 1. Uso de branches
 ### 1.1 O que são branches?
 Branches são derivações do código utilizados, normalmente, para adicionar novas funções ao programa. Ao utilizar branches, vários programadores podem trabalhar em um mesmo código ao mesmo tempo, ficando mais simples de resolver conflitos (diferenças entre os códigos). 
 
-Mesmo quando se está trabalhando sozinho num código, esta é uma prática que pode ser recomendada em alguns casos. Por exemplo, se você está construindo uma aplicação web, começa a implementação de uma nova função, e ela é mais complicada do que você esperava que ela fosse, então você decide começar outra parte do projeto antes de terminar essa. Você pode ter uma branch para cada uma e está tudo certo. Assim você continua com a main sempre funcionando sem precisar comentar parte do código para poder rodar.
+Mesmo quando se está trabalhando sozinho num código, esta é uma prática que é recomendada em alguns casos. Por exemplo: 
 
-No da imagem 1, Ana, Giovanni e Gustavo tem uma versão da Main (código base) nos seus respectivos computadores e cada um ficou responsável por adicionar uma nova função ao programa. 
+Imagine que você está construindo uma aplicação web e começa a implementação de uma nova função, mas acaba descobrindo que ela é mais complicada do que o esperado. O que você faz? Fica preso nela? Comenta parte do código?
+
+Na realidade o mais fácil é você trabalhar nessa nova função em um novo branch. Assim, você pode apenas deixar esse branch interminado e abre outro para continuar o projeto até você ter a capacidade de voltar para esta parte.
+
+Assim você continua com a main sempre funcionando sem precisar comentar parte do código para poder rodar.
+
+Vamos mostrar agora com imagens, para ficar mais claro!
+Na imagem 1, os alunos Ana, Giovanni e Gustavo tem uma versão da Main (código base) nos seus respectivos computadores e cada um ficou responsável por adicionar uma nova função ao programa. 
+Cada um clonou o repositório do projeto localmente, e estão inicialmente no branch main. Para que cada um comece a lidar com a sua parte do projeto, a primeira coisa que devem fazer é criar branches. 
 
 ![Image](https://github.com/user-attachments/assets/23deaf28-bcf0-4ec9-a966-42548fbec4ad)
 
@@ -134,7 +142,11 @@ Quando for fazer o push, será necessário fazer:
 
 >git push --f
 
-O git rebase reescreve o histórico de commits (muda o hash dos commits). Então, depois de um rebase, a sua branch local fica diferente da que está no repositório remoto. Por isso é necessário usar o push force. Em uma empresa, você vai demorar para ter clearance pra usar esse comando, mas em trabalhos da faculdade, está tudo bem. **Não é necessário fazer commit após fazer o rebase.**
+O git rebase reescreve o histórico de commits (muda o hash dos commits). Então, depois de um rebase, a sua branch local fica diferente da que está no repositório remoto. Por isso é necessário usar o push force. 
+
+Em uma empresa, você vai demorar para ter permissão pra usar esse comando, mas em trabalhos da faculdade dá para usar. 
+
+**Não é necessário fazer commit após fazer o rebase.**
 
 
 
