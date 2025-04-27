@@ -14,8 +14,8 @@ Como eu já ensinei várias pessoas a utilizarem o git, achei que pudesse deixar
   - [Procedimento de commit](#15-procedimento-de-commit)
   - [Como ver os branches no GitHub?](#16-como-ver-os-branches-no-github)
   - [Procedimento merge/pull request](#17-procedimento-merge-e-pull-request)
-  - [Comecei a alterar o código mas esqueci de criar uma branch, o que eu faço?](#18-comecei-a-alterar-o-codigo-mas-esqueci-de-criar-uma-branch-o-que-eu-faco)
-  - [Fiz push na Main, o que eu faço?](#19-fiz-push-na-main-o-que-eu-faco)
+  - [Comecei a alterar o código mas esqueci de criar uma branch!](#18-comecei-a-alterar-o-código-mas-esqueci-de-criar-uma-branch)
+  - [Fiz push na Main!!](#19-fiz-push-na-main)
   - [Procedimento rebase](#110-procedimento-rebase)
     
 ## 1. Uso de branches
@@ -90,10 +90,10 @@ Ou entre no branch e faça por lá.
 <img width="731" alt="Image" src="https://github.com/user-attachments/assets/73619bf8-5a21-4397-8ed0-f7641762ff9e" />
 
 - Avisar a todos da equipe que mergeou um novo PR, para que todos façam pull na main.
-### 1.8 Comecei a alterar o código mas esqueci de criar uma branch, o que eu   faço?
+### 1.8 Comecei a alterar o código mas esqueci de criar uma branch!
 >git checkout -b nome-da-branch
 Este comando irá levar suas alterações para esta nova branch.
-### 1.9 Fiz push na Main, o que eu faço?
+### 1.9 Fiz push na Main!!
 Quando se faz isso, você pula o verificador de merge do github, que verifica antes de fazer o merge se não há conflitos com a main. Isso poderá causar diversos problemas e seus colegas de trabalho _não ficarão nenhum pouco felizes._ Por isso é sempre **importante: antes de começar a codar, dê o comando git status para saber onde está e crie sua branch.** É possível bloquear o push direto na main pelas configurações do repositório no github, e isso é uma prática recomendada.
 ### 1.10 Procedimento rebase
 Rebase faz exatamente o que o nome diz: troca a base. Quando uma pessoa faz um merge na main, essa main não é automaticamente atualizada. Pelo contrário, todo mundo continua com a branch antiga (antes do merge) em seus computadores. Isso nem sempre é um problema.  No exemplo abaixo (imagem 2), todos os programadores estão trabalhando em uma parte do código independente uma da outra. Logo, não há necessidade de atualizarem as suas bases, é só cada um fazer um merge que dará tudo certo.
