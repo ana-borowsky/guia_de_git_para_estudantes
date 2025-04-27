@@ -30,7 +30,9 @@ Este comando troca de branch já criando uma branch nova. Observe que o padrão 
 ### 1.5 Procedimento de commit
 Primeiramente, só faça commit de códigos que estão funcionando. Assim, você consegue voltar para o último commit caso faça algo de muito errado, você sempre volta para uma versão do código que funciona.
   >git add . (ou o nome do arquivo)
+
 Sempre dê um git status para conferir se o que você quis adicionar realmente foi adicionado
+
   >git commit -m “Adiciona função inserir”
   >git push
 
