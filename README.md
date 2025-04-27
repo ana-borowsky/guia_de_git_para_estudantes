@@ -30,26 +30,32 @@ No da imagem 1, Ana, Giovanni e Gustavo tem uma versão da Main (código base) n
 
 ### 1.2 Como criar branches?
 Na linha de comando, digite: 
+
   >git checkout -b nome-da-branch
 
 Este comando troca de branch já criando uma branch nova. Observe que o padrão para nomes de branches é ser tudo em minúsculo e com traços no lugar de espaços.
 
 ### 1.3 Como trocar de branches?
+
   >git checkout nome-da-branch
 
 ### 1.4 Como saber em qual branch estou?
+
   >git status
 
 ### 1.5 Procedimento de commit
 Primeiramente, só faça commit de códigos que estão funcionando. Assim, você consegue voltar para o último commit caso faça algo de muito errado, você sempre volta para uma versão do código que funciona.
+
   >git add . (ou o nome do arquivo)
 
 Sempre dê um git status para conferir se o que você quis adicionar realmente foi adicionado
 
   >git commit -m “Adiciona função inserir”
+
   >git push
 
-A primeira vez (e só ela, o restante é normal (_git push_)) que fizer push para uma branch, o comando será:<br>
+A primeira vez (e só ela, o restante é normal (_git push_)) que fizer push para uma branch, o comando será:
+
   >git push --set-upstream origin nome-da-branch
 
 Observe que o padrão do commit é sempre ser com a primeira letra em maiúsculo, no tempo verbal imperativo afirmativo - ou seja, é como se fosse uma resposta à pergunta: o que este commit faz? - e sem ponto final.
@@ -69,7 +75,7 @@ Para deletar um branch, é só fazer este procedimento e clicar na lixeira. Depo
 Você termina a parte do código em que estava trabalhando, realiza os testes, verifica que tudo funciona direitinho. Então é hora de juntar a sua parte com a base do projeto (main). 
 - Primeiro: execute todos os passos do procedimento de commit.
 - Avise a todos os colegas de equipe que irá abrir um PR (pull request)
-- Abra o github no repositório do projeto e você verá uma mensagem em uma cor chamativa e com um botão ao lado escrito “compare & pull request”. Clique nele.<br><br>
+- Abra o github no repositório do projeto e você verá uma mensagem em uma cor chamativa e com um botão ao lado escrito “compare & pull request”. Clique nele.
 
 <img width="740" alt="Image" src="https://github.com/user-attachments/assets/f0a30448-dd96-4fc3-a7cd-54c47c97ed36" />
 
@@ -82,16 +88,24 @@ Ou entre no branch e faça por lá.
   Preencha todos os campos do pull request de maneira clara.
 - Dê um assign para que outro membro da equipe verifique se o seu pull request está ok para ser mergeado
 - Após a aprovação do PR por um colega, siga com os comandos:
+  
 >git checkout main
->git status (conferir se está na main)
->git pull_
+
+Conferir se está na main:
+
+>git status
+
+>git pull
+
 - Deletar o branch no github
 
 <img width="731" alt="Image" src="https://github.com/user-attachments/assets/73619bf8-5a21-4397-8ed0-f7641762ff9e" />
 
 - Avisar a todos da equipe que mergeou um novo PR, para que todos façam pull na main.
 ### 1.8 Comecei a alterar o código mas esqueci de criar uma branch!
+
 >git checkout -b nome-da-branch
+
 Este comando irá levar suas alterações para esta nova branch.
 ### 1.9 Fiz push na Main!!
 Quando se faz isso, você pula o verificador de merge do github, que verifica antes de fazer o merge se não há conflitos com a main. Isso poderá causar diversos problemas e seus colegas de trabalho _não ficarão nenhum pouco felizes._ Por isso é sempre **importante: antes de começar a codar, dê o comando git status para saber onde está e crie sua branch.** É possível bloquear o push direto na main pelas configurações do repositório no github, e isso é uma prática recomendada.
@@ -120,8 +134,7 @@ Quando for fazer o push, será necessário fazer:
 
 >git push --f
 
-O git rebase reescreve o histórico de commits (muda o hash dos commits). Então, depois de um rebase, a sua branch local fica diferente da que está no repositório remoto. Por isso é necessário usar o push force. Em uma empresa, você vai demorar para ter clearance pra usar esse comando, mas em trabalhos da faculdade, está tudo bem.
-**Não é necessário fazer commit após fazer o rebase.**
+O git rebase reescreve o histórico de commits (muda o hash dos commits). Então, depois de um rebase, a sua branch local fica diferente da que está no repositório remoto. Por isso é necessário usar o push force. Em uma empresa, você vai demorar para ter clearance pra usar esse comando, mas em trabalhos da faculdade, está tudo bem. **Não é necessário fazer commit após fazer o rebase.**
 
 
 
