@@ -1,5 +1,5 @@
 # Guia de git para estudantes
-Este é um guia básico e descontraído de git feito por uma estudante para outros estudantes. 
+Este é um guia básico e descontraído de git feito por uma estudante para outros estudantes! 
 
 :star:Se este guia lhe foi útil, ou você aprendeu a usar o git comigo, deixa sua estrelinha como agradecimento!:star:
 
@@ -81,7 +81,7 @@ Para deletar um branch, é só fazer este procedimento e clicar na lixeira. Depo
 
 ### 1.7 Procedimento merge e pull request
 Você termina a parte do código em que estava trabalhando, realiza os testes, verifica que tudo funciona direitinho. Então é hora de juntar a sua parte com a base do projeto (main). 
-- Primeiro: execute todos os passos do procedimento de commit.
+- Primeiro: execute todos os passos do procedimento de commit ([Procedimento de commit](#15-procedimento-de-commit)).
 - Avise a todos os colegas de equipe que irá abrir um PR (pull request)
 - Abra o github no repositório do projeto e você verá uma mensagem em uma cor chamativa e com um botão ao lado escrito “compare & pull request”. Clique nele.
 
@@ -116,17 +116,19 @@ Conferir se está na main:
 
 Este comando irá levar suas alterações para esta nova branch.
 ### 1.9 Fiz push na Main!!
-Quando se faz isso, você pula o verificador de merge do github, que verifica antes de fazer o merge se não há conflitos com a main. Isso poderá causar diversos problemas e seus colegas de trabalho _não ficarão nenhum pouco felizes._ Por isso é sempre **importante: antes de começar a codar, dê o comando git status para saber onde está e crie sua branch.** É possível bloquear o push direto na main pelas configurações do repositório no github, e isso é uma prática recomendada.
+Quando se faz isso, você pula o verificador de merge do github, que verifica antes de fazer o merge se não há conflitos com a main. Isso poderá causar diversos problemas e seus colegas de trabalho _não ficarão nenhum pouco felizes._ Por isso é sempre importante: **antes de começar a codar, dê o comando git status para saber onde está e crie sua branch.** É possível bloquear o push direto na main pelas configurações do repositório no github, e isso é uma prática recomendada.
 ### 1.10 Procedimento rebase
 Rebase faz exatamente o que o nome diz: troca a base. Quando uma pessoa faz um merge na main, essa main não é automaticamente atualizada. Pelo contrário, todo mundo continua com a branch antiga (antes do merge) em seus computadores. Isso nem sempre é um problema.  No exemplo abaixo (imagem 2), todos os programadores estão trabalhando em uma parte do código independente uma da outra. Logo, não há necessidade de atualizarem as suas bases, é só cada um fazer um merge que dará tudo certo.
 
 ![Image](https://github.com/user-attachments/assets/ea0a1db9-c0ee-4d5c-b47a-6c52ce2495f5)
 
-É sempre bom saber que quando um membro da equipe faz um merge, a main é atualizada no github, mas não nos computadores de cada membro da equipe, como é mostrado na imagem 3.
+É sempre bom saber que quando um membro da equipe faz um merge, a main é atualizada no github, mas não é automaticamente atualizada nos computadores de cada membro da equipe, como é mostrado na imagem 3.
 
 ![Image](https://github.com/user-attachments/assets/83d6340f-bdd6-4f93-b8b3-3632bb0fc4b7)
 
-Vamos dizer que no exemplo da imagem 3, Giovanni não precisa saber como a Ana fez a função “remover” para terminar a sua parte do código. Então não há problemas em ele não atualizar sua main dentro de sua branch (embora no seu computador, ele deva fazer isso, como descrito no tópico “merge” deste manual). Já Gustavo prefere saber como Ana fez, já que a função na qual está trabalhando - inserir - é um pouco parecida, então ele opta por fazer o rebase e continuar o trabalho a partir disso. Em sua branch ele dá o seguinte comando:
+Vamos dizer que no exemplo da imagem 3, Giovanni não precisa saber como a Ana fez a função “remover” para terminar a sua parte do código. Então não há problemas em ele não atualizar sua main dentro de sua branch (embora no seu computador, ele deva fazer isso, como descrito no tópico “merge” deste manual - [Procedimento merge/pull request](#17-procedimento-merge-e-pull-request)). 
+
+Já Gustavo prefere saber como Ana fez, já que a função na qual está trabalhando - inserir - é um pouco parecida, então ele opta por fazer o rebase e continuar o trabalho a partir disso. Em sua branch ele dá o seguinte comando:
 
 >git rebase main
 
