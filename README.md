@@ -6,7 +6,7 @@ Como eu já ensinei várias pessoas a utilizarem o git, achei que pudesse deixar
 :star:Se este guia lhe foi útil, ou você aprendeu a usar o git comigo, deixa sua estrelinha como agradecimento!:star:
 
 ## Índice
-- [Uso de branches](#uso-de-branches)
+- [Uso de branches](#1-uso-de-branches)
   - [O que são branches?](#o-que-são-branches)
   - [Como criar branches?](#como-criar-branches)
   - [Como trocar de branches?](#como-trocar-de-branches)
