@@ -24,14 +24,15 @@ Achou que faltou algo neste guia? Crie um novo issue que eu responderei o quanto
 ## 1. Como usar o git?
 É importante mencionar que não abordarei neste guia a parte de instalação/ setup do git, e sim, o seu uso!
 
-Ah, nós também estaremos fazendo uso do git via linha de comando e não via aplicativo desktop.
+Ah, nós também faremos uso do git via linha de comando e não via aplicativo desktop.
 ### 1.1 Afinal, para que serve o git?
-O git é um sistema de versionamento de código. Mas o que significa isso? Bem, sabe quando você está fazendo um trabalho e começa a salvar como versão1, versão2, versãofinal, versãofinalfinalagoravai, etc? Então, é isso que o git faz. 
+O git é um sistema de versionamento de código. Mas o que significa isso? Bem, sabe quando você está fazendo um trabalho e começa a salvar como versão1, versão2, versãofinal, versãofinalfinalagoravai, etc? Então, é isso que o git faz, só que direito.
 
 Com isso, você consegue:
  - ter um controle muito bom de qualquer trabalho,
- - acompanhar a evolução, ter a certeza de que pode voltar para uma parte do código que funciona caso você resolva fazer uma mudança que dê ruim (sem depender do crtl + z)
- - acesso de vários computadores facilitado
+ - acompanhar a evolução,
+ - ter a certeza de que pode voltar para uma parte do código que funciona caso você resolva fazer uma mudança que dê ruim (sem depender do crtl + z)
+ - acesso ao código de vários computadores de forma facilitada
  - controle melhor de trabalhos em grupo
 
 Eu prometo que depois que você aprender a usar o git, você não vai conseguir entender como as pessoas viviam antes dele.
@@ -53,7 +54,7 @@ Para adicionar somente um arquivo:
 
 Agora faça novamente o comando _git status_ e veja se os arquivos que você quer commitar ficaram verdinhos. Caso isso não tenha acontecido, provavelmente você não está na pasta certa na linha de comando. É preciso que os arquivos fiquem verdes para que sejam commitados.
 
-Vamos fazer o commit efetivamente dito.
+Agora vamos fazer o commit efetivamente dito.
   >git commit -m “Escreva aqui a mensagem do commit”
 
 Você já commitou, mas se você abrir o github no repositório do projeto, verá que sua mudança ainda não está aparecendo. Para que ela apareça, é preciso fazer o _push_:
@@ -64,11 +65,11 @@ Agora sim, abra o github no repositório do projeto e verá que o seu código ag
 ![Image](https://github.com/user-attachments/assets/4827202e-153f-4ff5-af72-45cec62e67ab)
 
 ## 1.3 Regras básicas de sobrevivência do commit
-Para fazer o melhor aproveitamento do commit possível, existe uma série de dicas que facilitarão muito a sua vida, as quais serão brevemente explicadas abaixo.
+Para fazer o melhor aproveitamento do commit, existe uma série de dicas que facilitarão muito a sua vida, as quais serão brevemente explicadas abaixo.
 
 ### 1.3.1 A primeira e mais importante dica:
 
-**Só faça commit de códigos que estão funcionando**. 
+**Só faça commit de códigos que funcionem**. 
 
 Assim, você consegue voltar para o último commit caso faça alguma alteração que faça com que o código pare de funcionar.
 
@@ -83,7 +84,8 @@ Então se quiser fazer essas três coisas mencionadas no exemplo, faça:
  - Um para remover comentários
 
 ### 1.3.3 Padrões de mensagem de commit
-Sempre começar a mensagem com a primeira letra em maiúsculo, no tempo verbal imperativo afirmativo, ou seja, é como se fosse uma resposta à pergunta: o que este commit faz? - e sem ponto final.
+Sempre começar a mensagem com a primeira letra em maiúsculo, no tempo verbal imperativo afirmativo, ou seja, é como se fosse uma resposta à pergunta: o que este commit faz? 
+As mensagens não devem ter ponto final.
 
 **Exemplos:**
 
@@ -96,7 +98,7 @@ Evitar commits genéricos e imprecisos como:
 - Arruma bugs (que bugs?)
 - Mexe na função imprimir (tá, mas o que foi mudado?)
 
-A boa prática é sempre fazer pequenos commits que sempre tenham o nome condizente exatamente com o que foi feito.
+A boa prática é sempre fazer commits façam só a mensagem do commit diz.
 
 **Anti-exemplos**
 Abaixo são mostrados alguns exemplos de como **não fazer commits** e os problemas com eles:
@@ -116,7 +118,12 @@ O terceiro errado:
  - Primeira letra não está em maiúsculo,
  - Tempo verbal incorreto.
 
-- ### 1.3.4 Resumo
+### 1.3.4 Comandos commit
+> git add .
+> git commit -m "Cria função remover"
+> git push
+
+### 1.3.5 Resumo
   -  Só commite códigos que funcionem
   -  Só mexa em _uma coisa_ específica em cada commit
   -  Dê nomes que digam exatamente o que você fez naquele commit
@@ -129,7 +136,7 @@ O terceiro errado:
 ### 2.1 O que são branches?
 Branches são derivações do código utilizados, normalmente, para adicionar novas funções ao programa. Ao utilizar branches, vários programadores podem trabalhar em um mesmo código ao mesmo tempo, ficando mais simples de resolver conflitos (diferenças entre os códigos). 
 
-Mesmo quando se está trabalhando sozinho num código, esta é uma prática que é recomendada em alguns casos. Por exemplo: 
+Mesmo quando se está trabalhando sozinho num código, esta é uma prática que é recomendada. Por exemplo: 
 
 Imagine que você está construindo uma aplicação web e começa a implementação de uma nova função, mas acaba descobrindo que ela é mais complicada do que o esperado. O que você faz? Fica preso nela? Comenta parte do código?
 
@@ -139,7 +146,10 @@ Assim você continua com a main sempre funcionando sem precisar comentar parte d
 
 Vamos mostrar agora com imagens, para ficar mais claro!
 Na imagem 1, os alunos Ana, Giovanni e Gustavo tem uma versão da Main (código base) nos seus respectivos computadores e cada um ficou responsável por adicionar uma nova função ao programa. 
-Cada um clonou o repositório do projeto localmente, e estão inicialmente no branch main. Para que cada um comece a lidar com a sua parte do projeto, a primeira coisa que devem fazer é criar branches. 
+
+Cada um clonou o repositório do projeto localmente, e estão inicialmente no branch main. 
+
+Para que cada um comece a lidar com a sua parte do projeto, a primeira coisa que devem fazer é criar branches. 
 
 ![Image](https://github.com/user-attachments/assets/23deaf28-bcf0-4ec9-a966-42548fbec4ad)
 
@@ -148,7 +158,7 @@ Na linha de comando, digite:
 
   >git checkout -b nome-da-branch
 
-Este comando troca de branch já criando uma branch nova. Observe que o padrão para nomes de branches é ser tudo em minúsculo e com traços no lugar de espaços.
+Este comando troca de branch já criando um branch novo. Observe que o padrão para nomes de branches é ser tudo em minúsculo e com traços no lugar de espaços.
 
 ### 2.3 Como trocar de branches?
 
@@ -159,15 +169,17 @@ Este comando troca de branch já criando uma branch nova. Observe que o padrão 
   >git status
 
 ### 2.5 Como ver os branches no github?
-Entre no repositório, e embaixo do nome do repositório irá mostrar o nome da branch. Na página inicial geralmente é o branch main que aparece. Clique nele e em seguida em view all branches.
+Entre no repositório, e embaixo do nome do repositório irá mostrar o nome do branch. Na página inicial geralmente é o branch main que aparece. Clique nele e em seguida em view all branches.
 
 ![Image](https://github.com/user-attachments/assets/1ca4246b-ee7d-41c0-8a5f-c55c40ecd152)
 
 Para deletar um branch, é só fazer este procedimento e clicar na lixeira. Depois de fazer o merge, ou caso desista de trabalhar neste branch, ele deve ser deletado.
 
 ### 2.6 Procedimento merge e pull request
-Você termina a parte do código em que estava trabalhando, realiza os testes, verifica que tudo funciona direitinho. Então é hora de juntar a sua parte com a base do projeto (main). 
+Você termina a parte do código em que estava trabalhando, realiza os testes, _verifica que tudo funciona direitinho_. Então é hora de juntar a sua parte com a base do projeto (main). 
 - Primeiro: execute todos os passos do [Como salvar o código no git? Também conhecido como commit](#12-como-salvar-o-codigo-no-git-também-conhecido-como-commit).
+- Apenas na primeira vez que fizer o push, você tem que dar o seguinte comando:
+>git push --set-upstream origin nome-da-branch
 - Avise a todos os colegas de equipe que irá abrir um PR (pull request)
 - Abra o github no repositório do projeto e você verá uma mensagem em uma cor chamativa e com um botão ao lado escrito “compare & pull request”. Clique nele.
 
@@ -180,18 +192,26 @@ Ou entre no branch e faça por lá.
 <img width="741" alt="Image" src="https://github.com/user-attachments/assets/9b5cbe7c-86b1-4313-b038-40b0a063d304" />
 
   Preencha todos os campos do pull request de maneira clara.
-- Dê um assign para que outro membro da equipe verifique se o seu pull request está ok para ser mergeado
-- Após a aprovação do PR por um colega, siga com os comandos:
+- Dê um assign para que outro membro da equipe verifique se o seu pull request está ok para ser mergeado (você também pode auto-aprovar seu PR se quiser)
+- Após a aprovação do PR por você ou por um colega, siga com os passos que serão descritos logo mais.
+
+Primeiro é interessante você saber que ao mergear um PR, o seu branch main local _não será automaticamente atualizado_. 
+
+Após o PR mergeado:
+
+Volte para o branch main:
   
 >git checkout main
 
-Conferir se está na main:
+Confira se está na main com:
 
 >git status
 
+Atualize a sua main local com:
+
 >git pull
 
-- Deletar o branch no github
+- Delete o branch no github
 
 <img width="731" alt="Image" src="https://github.com/user-attachments/assets/73619bf8-5a21-4397-8ed0-f7641762ff9e" />
 
@@ -235,6 +255,16 @@ O git rebase reescreve o histórico de commits (muda o hash dos commits). Então
 Em uma empresa, você vai demorar para ter permissão pra usar esse comando, mas em trabalhos da faculdade dá para usar. 
 
 **Não é necessário fazer commit após fazer o rebase.**
+
+## 2.7.1 Resumo comandos branch
+>git checkout -b nome-da-branch
+_Coda, coda, coda mais um pouquinho_
+>git add .
+>git commit -m "Adiciona função de imprimir"
+>git push
+_Termina o objetivo do branch, e mergeia um pull request_
+>git checkout main
+>git pull
 
 
 
