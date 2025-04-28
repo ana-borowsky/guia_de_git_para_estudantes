@@ -66,20 +66,65 @@ Agora sim, abra o github no repositório do projeto e verá que o seu código ag
 ## 1.3 Regras básicas de sobrevivência do commit
 Para fazer o melhor aproveitamento do commit possível, existe uma série de dicas que facilitarão muito a sua vida, as quais serão brevemente explicadas abaixo.
 
-A primeira e mais importante dica:
+### 1.3.1 A primeira e mais importante dica:
 
-**só faça commit de códigos que estão funcionando**. 
+**Só faça commit de códigos que estão funcionando**. 
 
-Assim, você consegue voltar para o último commit caso faça algo de muito errado, você sempre volta para uma versão do código que funciona.
+Assim, você consegue voltar para o último commit caso faça alguma alteração que faça com que o código pare de funcionar.
 
-Observe que o padrão do commit é sempre ser com a primeira letra em maiúsculo, no tempo verbal imperativo afirmativo - ou seja, é como se fosse uma resposta à pergunta: o que este commit faz? - e sem ponto final.
+### 1.3.2 O que deve ter em um commit?
+Para que um commit seja super legível, o ideal é que você faça somente **uma coisa em cada um**.
+
+Evite fazer um commit que implemente uma função em um arquivo, modifique a formatação do código em outro, e remova comentários em um terceiro. Pois dessa forma, quando você for ver o commit pelo github, terão mil alterações em mil arquivos diferentes, e ficará mais difícil achar a alteração importante que realmente foi o ponto alto do commit.
+
+Então se quiser fazer essas três coisas mencionadas no exemplo, faça:
+ - Um commit para implementar a função
+ - Um para corrigir a formatação
+ - Um para remover comentários
+
+### 1.3.3 Padrões de mensagem de commit
+Sempre começar a mensagem com a primeira letra em maiúsculo, no tempo verbal imperativo afirmativo, ou seja, é como se fosse uma resposta à pergunta: o que este commit faz? - e sem ponto final.
+
+**Exemplos:**
 
 ![Image](https://github.com/user-attachments/assets/862be7da-a4a8-4ffd-bbd1-9ea0b498e121)
 
 A língua utilizada para os commits depende do projeto. Sempre combine com seus colegas qual será a utilizada para não ficar misturado.
 
-Evitar commits genéricos e imprecisos como: Faz pequenas alterações (quais?), arruma bugs (que bugs?), etc. A boa prática é sempre fazer pequenos commits que sempre tenham o nome condizente exatamente com o que foi feito.
+Evitar commits genéricos e imprecisos como: 
+- Faz pequenas alterações (quais?),
+- Arruma bugs (que bugs?)
+- Mexe na função imprimir (tá, mas o que foi mudado?)
 
+A boa prática é sempre fazer pequenos commits que sempre tenham o nome condizente exatamente com o que foi feito.
+
+**Anti-exemplos**
+Abaixo são mostrados alguns exemplos de como **não fazer commits** e os problemas com eles:
+
+![Image](https://github.com/user-attachments/assets/430ddd48-1171-44a1-aff2-3b6621098a76)
+O primeiro está errado pois: 
+- Tempo verbal incorreto,
+- Foram feitas três tarefas ao invés de uma,
+- A própria descrição não é clara o suficiente. Eu só entendo porque não faz muito tempo que este trabalho foi feito e eu ainda lembro do que se trata.
+
+O segundo errado:
+ - Deveria ser chamado de "Inicia modelagem lógica", ao invés de utilizar o tempo verbal errado e ter "incompleto" no nome.
+
+O terceiro errado:
+ - Está em inglês, sendo que o padrão do trabalho foi decidido como sendo português,
+ - Mensagem ruim. Eu só entendo o que quer dizer porque faz pouco tempo que o trabalho foi feito. 
+ - Primeira letra não está em maiúsculo,
+ - Tempo verbal incorreto.
+
+- ### 1.3.4 Resumo
+  -  Só commite códigos que funcionem
+  -  Só mexa em _uma coisa_ específica em cada commit
+  -  Dê nomes que digam exatamente o que você fez naquele commit
+    -  Resposta à pergunta: o que este commit faz?
+    -  Sempre na mesma língua (ou tudo em português ou tudo em inglês)
+    -  Primeira letra em maiúsculo
+    -  Sem pontuação no final
+  
 ## 2. Uso de branches
 ### 2.1 O que são branches?
 Branches são derivações do código utilizados, normalmente, para adicionar novas funções ao programa. Ao utilizar branches, vários programadores podem trabalhar em um mesmo código ao mesmo tempo, ficando mais simples de resolver conflitos (diferenças entre os códigos). 
