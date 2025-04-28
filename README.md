@@ -3,11 +3,9 @@ Este é um guia básico e descontraído de git feito por uma estudante para outr
 
 :star:Se este guia lhe foi útil, ou você aprendeu a usar o git comigo, deixa sua estrelinha como agradecimento!:star:
 
-Achou que faltou algo neste guia? Crie um novo issue que eu responderei o quanto antes!
+Achou que faltou algo neste guia? Crie um novo [issue](https://github.com/ana-borowsky/guia_de_git_para_estudantes/issues/new) que eu responderei o quanto antes!
 
 ## Índice
-Aqui está seu índice do GitHub finalizado e formatado no mesmo padrão que você começou:
-
 - 1. [Como usar o git?](#1-como-usar-o-git)
   - 1.1 [Afinal, para que serve o git?](#11-afinal-para-que-serve-o-git)
   - 1.2 [Como salvar o código no git? Também conhecido como commit](#12-como-salvar-o-código-no-git-também-conhecido-como-commit)
@@ -120,7 +118,7 @@ O primeiro está errado pois:
 - A própria descrição não é clara o suficiente. Eu só entendo porque não faz muito tempo que este trabalho foi feito e eu ainda lembro do que se trata.
 
 O segundo errado:
- - Deveria ser chamado de "Inicia modelagem lógica", ao invés de utilizar o tempo verbal errado e ter "incompleto" no nome.
+ - Deveria ser chamado de "Inicia modelagem lógica do banco de dados", ao invés de utilizar o tempo verbal errado e ter "incompleto" no nome.
 
 O terceiro errado:
  - Está em inglês, sendo que o padrão do trabalho foi decidido como sendo português,
@@ -269,6 +267,10 @@ O git rebase reescreve o histórico de commits (muda o hash dos commits). Então
 Em uma empresa, você vai demorar para ter permissão pra usar esse comando, mas em trabalhos da faculdade dá para usar. 
 
 **Não é necessário fazer commit após fazer o rebase.**
+
+E assim ficou a visão de Gustavo da main após o rebase:
+
+![Image](https://github.com/user-attachments/assets/72f80711-fbdf-4e6b-8ae3-ad058e836686)
 
 ### 2.10 Você pode entrar no branch dos amiguinhos
 Se seu colega já tiver feito push no branch dele, basta você fazer os seguintes comandos caso queira entrar neste branch:
