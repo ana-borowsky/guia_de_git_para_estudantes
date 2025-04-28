@@ -34,7 +34,7 @@ Com isso, você consegue:
  - acesso de vários computadores facilitado
  - controle melhor de trabalhos em grupo
 
-Eu prometo que quando você aprender a usar o git, você não vai conseguir entender como as pessoas viviam antes dele.
+Eu prometo que depois que você aprender a usar o git, você não vai conseguir entender como as pessoas viviam antes dele.
 
 ### 1.2 Como salvar o código no git? Também conhecido como commit
 Primeiramente, o que é o commit? É mais ou menos o equivalente a salvar o seu código no git (não no seu computador). 
@@ -61,12 +61,20 @@ Você já commitou, mas se você abrir o github no repositório do projeto, ver�
 
 Agora sim, abra o github no repositório do projeto e verá que o seu código agora está aparecendo lá.
 
+![Image](https://github.com/user-attachments/assets/4827202e-153f-4ff5-af72-45cec62e67ab)
+
 ## 1.3 Regras básicas de sobrevivência do commit
 Para fazer o melhor aproveitamento do commit possível, existe uma série de dicas que facilitarão muito a sua vida, as quais serão brevemente explicadas abaixo.
 
-Primeiramente, só faça commit de códigos que estão funcionando. Assim, você consegue voltar para o último commit caso faça algo de muito errado, você sempre volta para uma versão do código que funciona.
+A primeira e mais importante dica:
+
+**só faça commit de códigos que estão funcionando**. 
+
+Assim, você consegue voltar para o último commit caso faça algo de muito errado, você sempre volta para uma versão do código que funciona.
 
 Observe que o padrão do commit é sempre ser com a primeira letra em maiúsculo, no tempo verbal imperativo afirmativo - ou seja, é como se fosse uma resposta à pergunta: o que este commit faz? - e sem ponto final.
+
+![Image](https://github.com/user-attachments/assets/862be7da-a4a8-4ffd-bbd1-9ea0b498e121)
 
 A língua utilizada para os commits depende do projeto. Sempre combine com seus colegas qual será a utilizada para não ficar misturado.
 
