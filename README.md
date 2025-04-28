@@ -113,6 +113,7 @@ A boa prática é sempre fazer commits façam só a mensagem do commit diz.
 Abaixo são mostrados alguns exemplos de como **não fazer commits** e os problemas com eles:
 
 ![Image](https://github.com/user-attachments/assets/430ddd48-1171-44a1-aff2-3b6621098a76)
+
 O primeiro está errado pois: 
 - Tempo verbal incorreto,
 - Foram feitas três tarefas ao invés de uma,
@@ -144,6 +145,8 @@ O terceiro errado:
 > git push
   
 ## 2. Uso de branches
+Se você reparou que para trabalhos em grupo, estava sendo um pouco complicado usar o git, pois você e seus colegas tinham que avisar quando estavam mexendo no projeto, e volta e meia alguém não avisava e acabava gerando confusão, seus problemas acabaram!
+
 ### 2.1 O que são branches?
 Branches são derivações do código utilizados, normalmente, para adicionar novas funções ao programa. Ao utilizar branches, vários programadores podem trabalhar em um mesmo código ao mesmo tempo, ficando mais simples de resolver conflitos (diferenças entre os códigos). 
 
