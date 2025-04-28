@@ -67,13 +67,13 @@ Agora sim, abra o github no repositório do projeto e verá que o seu código ag
 ## 1.3 Regras básicas de sobrevivência do commit
 Para fazer o melhor aproveitamento do commit, existe uma série de dicas que facilitarão muito a sua vida, as quais serão brevemente explicadas abaixo.
 
-### 1.3.1 A primeira e mais importante dica:
+#### 1.3.1 A primeira e mais importante dica:
 
 **Só faça commit de códigos que funcionem**. 
 
 Assim, você consegue voltar para o último commit caso faça alguma alteração que faça com que o código pare de funcionar.
 
-### 1.3.2 O que deve ter em um commit?
+#### 1.3.2 O que deve ter em um commit?
 Para que um commit seja super legível, o ideal é que você faça somente **uma coisa em cada um**.
 
 Evite fazer um commit que implemente uma função em um arquivo, modifique a formatação do código em outro, e remova comentários em um terceiro. Pois dessa forma, quando você for ver o commit pelo github, terão mil alterações em mil arquivos diferentes, e ficará mais difícil achar a alteração importante que realmente foi o ponto alto do commit.
@@ -83,7 +83,7 @@ Então se quiser fazer essas três coisas mencionadas no exemplo, faça:
  - Um para corrigir a formatação
  - Um para remover comentários
 
-### 1.3.3 Padrões de mensagem de commit
+#### 1.3.3 Padrões de mensagem de commit
 Sempre começar a mensagem com a primeira letra em maiúsculo, no tempo verbal imperativo afirmativo, ou seja, é como se fosse uma resposta à pergunta: o que este commit faz? 
 As mensagens não devem ter ponto final.
 
@@ -118,12 +118,14 @@ O terceiro errado:
  - Primeira letra não está em maiúsculo,
  - Tempo verbal incorreto.
 
-### 1.3.4 Comandos commit
+#### 1.3.4 Comandos commit
 > git add .
+
 > git commit -m "Cria função remover"
+
 > git push
 
-### 1.3.5 Resumo
+#### 1.3.5 Resumo
   -  Só commite códigos que funcionem
   -  Só mexa em _uma coisa_ específica em cada commit
   -  Dê nomes que digam exatamente o que você fez naquele commit
@@ -256,14 +258,21 @@ Em uma empresa, você vai demorar para ter permissão pra usar esse comando, mas
 
 **Não é necessário fazer commit após fazer o rebase.**
 
-## 2.7.1 Resumo comandos branch
+#### 2.7.1 Resumo comandos branch
 >git checkout -b nome-da-branch
+
 _Coda, coda, coda mais um pouquinho_
+
 >git add .
+
 >git commit -m "Adiciona função de imprimir"
+
 >git push
+
 _Termina o objetivo do branch, e mergeia um pull request_
+
 >git checkout main
+
 >git pull
 
 
