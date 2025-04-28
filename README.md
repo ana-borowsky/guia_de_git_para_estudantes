@@ -3,23 +3,77 @@ Este é um guia básico e descontraído de git feito por uma estudante para outr
 
 :star:Se este guia lhe foi útil, ou você aprendeu a usar o git comigo, deixa sua estrelinha como agradecimento!:star:
 
-Este guia está em processo de construção. Mas a parte que ensina a usar branches já está pronta!
+Este guia está em processo de construção. Mas se você já sabe fazer o uso básico do git e quer aprender a usar branches, esta parte já está pronta!
 
 ## Índice
-- 1. [Uso de branches](#1-uso-de-branches)
-  - 1.1 [O que são branches?](#11-o-que-são-branches)
-  - 1.2 [Como criar branches?](#12-como-criar-branches)
-  - 1.3 [Como trocar de branches?](#13-como-trocar-de-branches)
-  - 1.4 [Como saber em qual branch estou?](#14-como-saber-em-qual-branch-estou)
-  - 1.5 [Procedimento de commit](#15-procedimento-de-commit)
-  - 1.6 [Como ver os branches no GitHub?](#16-como-ver-os-branches-no-github)
-  - 1.7 [Procedimento merge/pull request](#17-procedimento-merge-e-pull-request)
-  - 1.8 [Comecei a alterar o código mas esqueci de criar uma branch!](#18-comecei-a-alterar-o-código-mas-esqueci-de-criar-uma-branch)
-  - 1.9 [Fiz push na Main!!](#19-fiz-push-na-main)
-  - 1.10 [Procedimento rebase](#110-procedimento-rebase)
+- 1. [Como usar o git? (em construção)](#1-como-usar-o-git-em-construção)
+  - 1.1 [Afinal, para que serve o git?](#11-afinal-para-que-serve-o-git)
+  - 1.2 [Como salvar o código no git? Também conhecido como commit](#12-como-salvar-o-codigo-no-git-também-conhecido-como-commit)
+  - 1.3 [Regras básicas de sobrevivência do commit](#13-regras-básicas-de-sobrevivência-do-commit)
+- 2. [Uso de branches](#2-uso-de-branches)
+  - 2.1 [O que são branches?](#21-o-que-são-branches)
+  - 2.2 [Como criar branches?](#22-como-criar-branches)
+  - 2.3 [Como trocar de branches?](#23-como-trocar-de-branches)
+  - 2.4 [Como saber em qual branch estou?](#24-como-saber-em-qual-branch-estou)
+  - 2.6 [Como ver os branches no GitHub?](#26-como-ver-os-branches-no-github)
+  - 2.7 [Procedimento merge/pull request](#27-procedimento-merge-e-pull-request)
+  - 2.8 [Comecei a alterar o código mas esqueci de criar uma branch!](#28-comecei-a-alterar-o-código-mas-esqueci-de-criar-uma-branch)
+  - 2.9 [Fiz push na Main!!](#29-fiz-push-na-main)
+  - 2.10 [Procedimento rebase](#210-procedimento-rebase)
     
-## 1. Uso de branches
-### 1.1 O que são branches?
+## 1. Como usar o git? (em construção)
+É importante mencionar que não abordarei neste guia a parte de instalação/ setup do git, e sim, o seu uso!
+
+Ah, nós também estaremos fazendo uso do git via linha de comando e não via aplicativo desktop.
+### 1.1 Afinal, para que serve o git?
+O git é um sistema de versionamento de código. Mas o que significa isso? Bem, sabe quando você está fazendo um trabalho e começa a salvar como versão1, versão2, versãofinal, versãofinalfinalagoravai, etc? Então, é isso que o git faz. 
+
+Com isso, você consegue:
+ - ter um controle muito bom de qualquer trabalho,
+ - acompanhar a evolução, ter a certeza de que pode voltar para uma parte do código que funciona caso você resolva fazer uma mudança que dê ruim (sem depender do crtl + z)
+ - acesso de vários computadores facilitado
+ - controle melhor de trabalhos em grupo
+
+Eu prometo que quando você aprender a usar o git, você não vai conseguir entender como as pessoas viviam antes dele.
+
+### 1.2 Como salvar o código no git? Também conhecido como commit
+Primeiramente, o que é o commit? É mais ou menos o equivalente a salvar o seu código no git (não no seu computador). 
+Existem algumas regras para fazer isso da maneira a aproveitar melhor essa feature, as quais serão explicadas ao longo deste capítulo, mas vamos começar pelo comando de como fazer isso.
+
+Se seu código está pronto para o commit, dê o comando:
+>git status
+
+Isso vai te mostrar se tem arquivos que foram modificados para serem commitados. Se você modificou o arquivo, ele deve aparecer em vermelho no console.
+
+Agora você vai adicionar o que quer commitar. Para adicionar todos os arquivos do projeto que foram modificados:
+>git add .
+
+Para adicionar somente um arquivo:
+>git add nome_do_arquivo.py
+
+Agora faça novamente o comando _git status_ e veja se os arquivos que você quer commitar ficaram verdinhos. Caso isso não tenha acontecido, provavelmente você não está na pasta certa na linha de comando. É preciso que os arquivos fiquem verdes para que sejam commitados.
+
+Vamos fazer o commit efetivamente dito.
+  >git commit -m “Escreva aqui a mensagem do commit”
+
+Você já commitou, mas se você abrir o github no repositório do projeto, verá que sua mudança ainda não está aparecendo. Para que ela apareça, é preciso fazer o _push_:
+  >git push
+
+Agora sim, abra o github no repositório do projeto e verá que o seu código agora está aparecendo lá.
+
+## 1.3 Regras básicas de sobrevivência do commit
+Para fazer o melhor aproveitamento do commit possível, existe uma série de dicas que facilitarão muito a sua vida, as quais serão brevemente explicadas abaixo.
+
+Primeiramente, só faça commit de códigos que estão funcionando. Assim, você consegue voltar para o último commit caso faça algo de muito errado, você sempre volta para uma versão do código que funciona.
+
+Observe que o padrão do commit é sempre ser com a primeira letra em maiúsculo, no tempo verbal imperativo afirmativo - ou seja, é como se fosse uma resposta à pergunta: o que este commit faz? - e sem ponto final.
+
+A língua utilizada para os commits depende do projeto. Sempre combine com seus colegas qual será a utilizada para não ficar misturado.
+
+Evitar commits genéricos e imprecisos como: Faz pequenas alterações (quais?), arruma bugs (que bugs?), etc. A boa prática é sempre fazer pequenos commits que sempre tenham o nome condizente exatamente com o que foi feito.
+
+## 2. Uso de branches
+### 2.1 O que são branches?
 Branches são derivações do código utilizados, normalmente, para adicionar novas funções ao programa. Ao utilizar branches, vários programadores podem trabalhar em um mesmo código ao mesmo tempo, ficando mais simples de resolver conflitos (diferenças entre os códigos). 
 
 Mesmo quando se está trabalhando sozinho num código, esta é uma prática que é recomendada em alguns casos. Por exemplo: 
@@ -36,52 +90,31 @@ Cada um clonou o repositório do projeto localmente, e estão inicialmente no br
 
 ![Image](https://github.com/user-attachments/assets/23deaf28-bcf0-4ec9-a966-42548fbec4ad)
 
-### 1.2 Como criar branches?
+### 2.2 Como criar branches?
 Na linha de comando, digite: 
 
   >git checkout -b nome-da-branch
 
 Este comando troca de branch já criando uma branch nova. Observe que o padrão para nomes de branches é ser tudo em minúsculo e com traços no lugar de espaços.
 
-### 1.3 Como trocar de branches?
+### 2.3 Como trocar de branches?
 
   >git checkout nome-da-branch
 
-### 1.4 Como saber em qual branch estou?
+### 2.4 Como saber em qual branch estou?
 
   >git status
 
-### 1.5 Procedimento de commit
-Primeiramente, só faça commit de códigos que estão funcionando. Assim, você consegue voltar para o último commit caso faça algo de muito errado, você sempre volta para uma versão do código que funciona.
-
-  >git add . (ou o nome do arquivo)
-
-Sempre dê um git status para conferir se o que você quis adicionar realmente foi adicionado
-
-  >git commit -m “Adiciona função inserir”
-
-  >git push
-
-A primeira vez (e só ela, o restante é normal (_git push_)) que fizer push para uma branch, o comando será:
-
-  >git push --set-upstream origin nome-da-branch
-
-Observe que o padrão do commit é sempre ser com a primeira letra em maiúsculo, no tempo verbal imperativo afirmativo - ou seja, é como se fosse uma resposta à pergunta: o que este commit faz? - e sem ponto final.
-
-A língua utilizada para os commits depende do projeto. Sempre combine com seus colegas qual será a utilizada para não ficar misturado.
-
-Evitar commits genéricos e imprecisos como: Faz pequenas alterações (quais?), arruma bugs (que bugs?), etc. A boa prática é sempre fazer pequenos commits que sempre tenham o nome condizente exatamente com o que foi feito.
-
-### 1.6 Como ver os branches no github?
+### 2.5 Como ver os branches no github?
 Entre no repositório, e embaixo do nome do repositório irá mostrar o nome da branch. Na página inicial geralmente é o branch main que aparece. Clique nele e em seguida em view all branches.
 
 ![Image](https://github.com/user-attachments/assets/1ca4246b-ee7d-41c0-8a5f-c55c40ecd152)
 
 Para deletar um branch, é só fazer este procedimento e clicar na lixeira. Depois de fazer o merge, ou caso desista de trabalhar neste branch, ele deve ser deletado.
 
-### 1.7 Procedimento merge e pull request
+### 2.6 Procedimento merge e pull request
 Você termina a parte do código em que estava trabalhando, realiza os testes, verifica que tudo funciona direitinho. Então é hora de juntar a sua parte com a base do projeto (main). 
-- Primeiro: execute todos os passos do [Procedimento de commit](#15-procedimento-de-commit).
+- Primeiro: execute todos os passos do [Como salvar o código no git? Também conhecido como commit](#12-como-salvar-o-codigo-no-git-também-conhecido-como-commit).
 - Avise a todos os colegas de equipe que irá abrir um PR (pull request)
 - Abra o github no repositório do projeto e você verá uma mensagem em uma cor chamativa e com um botão ao lado escrito “compare & pull request”. Clique nele.
 
@@ -110,14 +143,14 @@ Conferir se está na main:
 <img width="731" alt="Image" src="https://github.com/user-attachments/assets/73619bf8-5a21-4397-8ed0-f7641762ff9e" />
 
 - Avisar a todos da equipe que mergeou um novo PR, para que todos façam pull na main.
-### 1.8 Comecei a alterar o código mas esqueci de criar uma branch!
+### 2.7 Comecei a alterar o código mas esqueci de criar uma branch!
 
 >git checkout -b nome-da-branch
 
 Este comando irá levar suas alterações para esta nova branch.
-### 1.9 Fiz push na Main!!
+### 2.8 Fiz push na Main!!
 Quando se faz isso, você pula o verificador de merge do github, que verifica antes de fazer o merge se não há conflitos com a main. Isso poderá causar diversos problemas e seus colegas de trabalho _não ficarão nenhum pouco felizes._ Por isso é sempre importante: **antes de começar a codar, dê o comando git status para saber onde está e crie sua branch.** É possível bloquear o push direto na main pelas configurações do repositório no github, e isso é uma prática recomendada.
-### 1.10 Procedimento rebase
+### 2.9 Procedimento rebase
 Rebase faz exatamente o que o nome diz: troca a base. Quando uma pessoa faz um merge na main, essa main não é automaticamente atualizada. Pelo contrário, todo mundo continua com a branch antiga (antes do merge) em seus computadores. Isso nem sempre é um problema.  No exemplo abaixo (imagem 2), todos os programadores estão trabalhando em uma parte do código independente uma da outra. Logo, não há necessidade de atualizarem as suas bases, é só cada um fazer um merge que dará tudo certo.
 
 ![Image](https://github.com/user-attachments/assets/ea0a1db9-c0ee-4d5c-b47a-6c52ce2495f5)
@@ -126,7 +159,7 @@ Rebase faz exatamente o que o nome diz: troca a base. Quando uma pessoa faz um m
 
 ![Image](https://github.com/user-attachments/assets/83d6340f-bdd6-4f93-b8b3-3632bb0fc4b7)
 
-Vamos dizer que no exemplo da imagem 3, Giovanni não precisa saber como a Ana fez a função “remover” para terminar a sua parte do código. Então não há problemas em ele não atualizar sua main dentro de sua branch (embora no seu computador, ele deva fazer isso, como descrito no [Procedimento merge/pull request](#17-procedimento-merge-e-pull-request)). 
+Vamos dizer que no exemplo da imagem 3, Giovanni não precisa saber como a Ana fez a função “remover” para terminar a sua parte do código. Então não há problemas em ele não atualizar sua main dentro de sua branch (embora no seu computador, ele deva fazer isso, como descrito no [Procedimento merge/pull request](#26-procedimento-merge-e-pull-request)). 
 
 Já Gustavo prefere saber como Ana fez, já que a função na qual está trabalhando - inserir - é um pouco parecida, então ele opta por fazer o rebase e continuar o trabalho a partir disso. Em sua branch ele dá o seguinte comando:
 
