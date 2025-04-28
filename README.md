@@ -3,10 +3,10 @@ Este é um guia básico e descontraído de git feito por uma estudante para outr
 
 :star:Se este guia lhe foi útil, ou você aprendeu a usar o git comigo, deixa sua estrelinha como agradecimento!:star:
 
-Este guia está em processo de construção. Mas se você já sabe fazer o uso básico do git e quer aprender a usar branches, esta parte já está pronta!
+Achou que faltou algo neste guia? Crie um novo issue que eu responderei o quanto antes!
 
 ## Índice
-- 1. [Como usar o git? (em construção)](#1-como-usar-o-git-em-construção)
+- 1. [Como usar o git?](#1-como-usar-o-git)
   - 1.1 [Afinal, para que serve o git?](#11-afinal-para-que-serve-o-git)
   - 1.2 [Como salvar o código no git? Também conhecido como commit](#12-como-salvar-o-codigo-no-git-também-conhecido-como-commit)
   - 1.3 [Regras básicas de sobrevivência do commit](#13-regras-básicas-de-sobrevivência-do-commit)
@@ -21,7 +21,7 @@ Este guia está em processo de construção. Mas se você já sabe fazer o uso b
   - 2.9 [Fiz push na Main!!](#29-fiz-push-na-main)
   - 2.10 [Procedimento rebase](#210-procedimento-rebase)
     
-## 1. Como usar o git? (em construção)
+## 1. Como usar o git?
 É importante mencionar que não abordarei neste guia a parte de instalação/ setup do git, e sim, o seu uso!
 
 Ah, nós também estaremos fazendo uso do git via linha de comando e não via aplicativo desktop.
