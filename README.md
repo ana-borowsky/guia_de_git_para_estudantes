@@ -6,20 +6,29 @@ Este é um guia básico e descontraído de git feito por uma estudante para outr
 Achou que faltou algo neste guia? Crie um novo issue que eu responderei o quanto antes!
 
 ## Índice
+Aqui está seu índice do GitHub finalizado e formatado no mesmo padrão que você começou:
+
 - 1. [Como usar o git?](#1-como-usar-o-git)
   - 1.1 [Afinal, para que serve o git?](#11-afinal-para-que-serve-o-git)
   - 1.2 [Como salvar o código no git? Também conhecido como commit](#12-como-salvar-o-codigo-no-git-também-conhecido-como-commit)
   - 1.3 [Regras básicas de sobrevivência do commit](#13-regras-básicas-de-sobrevivência-do-commit)
+    - 1.3.1 [A primeira e mais importante dica](#131-a-primeira-e-mais-importante-dica)
+    - 1.3.2 [O que deve ter em um commit?](#132-o-que-deve-ter-em-um-commit)
+    - 1.3.3 [Padrões de mensagem de commit](#133-padrões-de-mensagem-de-commit)
+  - 1.4 [Resumo padrões commit](#14-resumo-padrões-commit)
+  - 1.5 [Resumo comandos commit](#15-resumo-comandos-commit)
 - 2. [Uso de branches](#2-uso-de-branches)
   - 2.1 [O que são branches?](#21-o-que-são-branches)
   - 2.2 [Como criar branches?](#22-como-criar-branches)
   - 2.3 [Como trocar de branches?](#23-como-trocar-de-branches)
   - 2.4 [Como saber em qual branch estou?](#24-como-saber-em-qual-branch-estou)
-  - 2.6 [Como ver os branches no GitHub?](#26-como-ver-os-branches-no-github)
-  - 2.7 [Procedimento merge/pull request](#27-procedimento-merge-e-pull-request)
-  - 2.8 [Comecei a alterar o código mas esqueci de criar uma branch!](#28-comecei-a-alterar-o-código-mas-esqueci-de-criar-uma-branch)
-  - 2.9 [Fiz push na Main!!](#29-fiz-push-na-main)
-  - 2.10 [Procedimento rebase](#210-procedimento-rebase)
+  - 2.5 [Como ver os branches no GitHub?](#25-como-ver-os-branches-no-github)
+  - 2.6 [Procedimento merge/pull request](#26-procedimento-mergepull-request)
+  - 2.7 [Comecei a alterar o código mas esqueci de criar um branch!](#27-comecei-a-alterar-o-código-mas-esqueçi-de-criar-um-branch)
+  - 2.8 [Fiz push na Main!!](#28-fiz-push-na-main)
+  - 2.9 [Procedimento rebase](#29-procedimento-rebase)
+  - 2.10 [Você pode entrar no branch dos amiguinhos](#210-você-pode-entrar-no-branch-dos-amiguinhos)
+  - 2.11 [Resumo comandos branch](#211-resumo-comandos-branch)
     
 ## 1. Como usar o git?
 É importante mencionar que não abordarei neste guia a parte de instalação/ setup do git, e sim, o seu uso!
@@ -67,7 +76,7 @@ Agora sim, abra o github no repositório do projeto e verá que o seu código ag
 ## 1.3 Regras básicas de sobrevivência do commit
 Para fazer o melhor aproveitamento do commit, existe uma série de dicas que facilitarão muito a sua vida, as quais serão brevemente explicadas abaixo.
 
-#### 1.3.1 A primeira e mais importante dica:
+#### 1.3.1 A primeira e mais importante dica
 
 **Só faça commit de códigos que funcionem**. 
 
@@ -118,14 +127,7 @@ O terceiro errado:
  - Primeira letra não está em maiúsculo,
  - Tempo verbal incorreto.
 
-#### 1.3.4 Comandos commit
-> git add .
-
-> git commit -m "Cria função remover"
-
-> git push
-
-#### 1.3.5 Resumo
+### 1.4 Resumo padrões commit
   -  Só commite códigos que funcionem
   -  Só mexa em _uma coisa_ específica em cada commit
   -  Dê nomes que digam exatamente o que você fez naquele commit
@@ -133,6 +135,13 @@ O terceiro errado:
     -  Sempre na mesma língua (ou tudo em português ou tudo em inglês)
     -  Primeira letra em maiúsculo
     -  Sem pontuação no final
+
+### 1.5 Resumo comandos commit
+> git add .
+
+> git commit -m "Cria função remover"
+
+> git push
   
 ## 2. Uso de branches
 ### 2.1 O que são branches?
@@ -177,7 +186,7 @@ Entre no repositório, e embaixo do nome do repositório irá mostrar o nome do 
 
 Para deletar um branch, é só fazer este procedimento e clicar na lixeira. Depois de fazer o merge, ou caso desista de trabalhar neste branch, ele deve ser deletado.
 
-### 2.6 Procedimento merge e pull request
+### 2.6 Procedimento merge/ pull request
 Você termina a parte do código em que estava trabalhando, realiza os testes, _verifica que tudo funciona direitinho_. Então é hora de juntar a sua parte com a base do projeto (main). 
 - Primeiro: execute todos os passos do [Como salvar o código no git? Também conhecido como commit](#12-como-salvar-o-codigo-no-git-também-conhecido-como-commit).
 - Apenas na primeira vez que fizer o push, você tem que dar o seguinte comando:
@@ -218,7 +227,7 @@ Atualize a sua main local com:
 <img width="731" alt="Image" src="https://github.com/user-attachments/assets/73619bf8-5a21-4397-8ed0-f7641762ff9e" />
 
 - Avisar a todos da equipe que mergeou um novo PR, para que todos façam pull na main.
-### 2.7 Comecei a alterar o código mas esqueci de criar uma branch!
+### 2.7 Comecei a alterar o código mas esqueci de criar um branch!
 
 >git checkout -b nome-da-branch
 
@@ -258,7 +267,13 @@ Em uma empresa, você vai demorar para ter permissão pra usar esse comando, mas
 
 **Não é necessário fazer commit após fazer o rebase.**
 
-#### 2.7.1 Resumo comandos branch
+### 2.10 Você pode entrar no branch dos amiguinhos
+Se seu colega já tiver feito push no branch dele, basta você fazer os seguintes comandos caso queira entrar neste branch:
+>git checkout main
+>git pull
+>git checkout nome-do-branch-do-coleguinha
+
+### 2.11 Resumo comandos branch
 >git checkout -b nome-da-branch
 
 _Coda, coda, coda mais um pouquinho_
