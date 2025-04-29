@@ -53,15 +53,19 @@ Se seu código está pronto para o _commit_, dê o comando:
 
 Isso vai te mostrar se tem arquivos que foram modificados para serem "commitados". Se você modificou o arquivo, ele deve aparecer em vermelho no console.
 
+![Image](https://github.com/user-attachments/assets/d21c151a-fdb4-4166-87f9-bdb9bec63c1c)
+
 Agora você vai adicionar o que quer "commitar". Para adicionar todos os arquivos do projeto que foram modificados:
 >git add .
 
-Para adicionar somente um arquivo:
+Ou adicione somente um arquivo:
 >git add nome_do_arquivo.py
 
 Agora faça novamente o comando _git status_ e veja se os arquivos que você quer "commitar" ficaram verdinhos. Caso isso não tenha acontecido, provavelmente você não está na pasta certa na linha de comando. É preciso que os arquivos fiquem verdes para que sejam commitados.
 
-Agora vamos fazer o _commit_ efetivamente dito.
+![Image](https://github.com/user-attachments/assets/925fa1da-d1b5-416d-908a-9055bf64cf6a)
+
+Agora vamos fazer o _commit_ propriamente dito.
   >git commit -m “Escreva aqui a mensagem do commit”
 
 Você já "commitou", mas se você abrir o github no repositório do projeto, verá que sua mudança ainda não está aparecendo. Para que ela apareça, é preciso fazer o _push_:
